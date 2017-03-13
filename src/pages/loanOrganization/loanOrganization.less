@@ -1,0 +1,96 @@
+//导航
+.nav-container{
+  display: flex;
+  background-color: #fff;
+  height: 183rpx;
+  margin-top: 10rpx;
+  border-bottom: 1rpx solid #eee;
+  .nav-list {
+    flex: 1;
+    text-align: center;
+    margin: auto;
+    .nav-l-image {
+      width: 79rpx;
+      height: 79rpx;
+    }
+    .nav-l-name {
+      display: block;
+      color: #333;
+      font-size: 23rpx;
+    }
+  }
+
+}
+//shop-list
+.shop-list {
+  background-color: #fff;
+}
+.hot-list {
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+  height: 173rpx;
+  .hot-list-shop {
+    margin-top: 15rpx;
+    width: 100rpx;
+    height: 116rpx;
+  }
+  .hot-list-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-size: 27rpx;
+    padding: 20rpx;
+    > text {
+      flex: 1;
+    }
+    .hot-l-t-3 {
+      font-size: 23rpx;
+    }
+    .hot-l-t-start {
+      position: absolute;
+      right: 20rpx;
+      height: 23rpx;
+      width: 135rpx;
+    }
+  }
+  .hot-lr {
+    margin: auto;
+  }
+}
+//rank-tab
+.rank-container {
+  background-color: #fff;
+  .rank-tab {
+    background-color: #EEE;
+    margin-top: 10rpx;
+    display: flex;
+    height: 46rpx;
+    .rank-tab-list {
+      width: 186rpx;
+      text-align: center;
+      flex: 1;
+      padding-right: 30rpx;
+      font-size: 23rpx;
+      height: 46rpx;
+      line-height: 46rpx;
+      .rank-icon {
+        position: relative;
+      }
+      .rank-icon::after {
+        position: absolute;
+        top: 20%;
+        right: -30rpx;
+        content: '';
+        width: 10rpx;
+        height: 10rpx;
+        border-width: 2rpx 2rpx 0 0;
+        border-color: #333;
+        border-style: solid;
+        transform: rotateZ(135deg);
+      }
+    }
+    .rank-tab-list.active {
+      background-color: #fff;
+    }
+  }
+}

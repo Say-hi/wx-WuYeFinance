@@ -1,0 +1,41 @@
+<!--轮播模板-->
+<template name="carouselTemp">
+    <view class="carousel-container">
+        <swiper bindchange="carouselChange" class="carousel-image" duration="{{carousel.duration}}" circular="{{carousel.circular}}" indicator-dots="{{carousel.indicatorDots}}" autoplay="{{carousel.atuoplay}}" current="{{carousel.current}}" interval="{{carousel.interval}}">
+            <block wx:for="{{carousel.images}}" wx:for-item="src" wx:key="unique">
+                <swiper-item>
+                    <image src="{{src}}" model="{{carousel.imageModel}}"></image>
+                </swiper-item>
+            </block>
+        </swiper>
+        <view class="carousel-dots">
+            <block wx:for="{{carousel.images}}" wx:key="unique">
+                <view class="dot{{index == carouselCurrent ? ' active' : ''}}"></view>
+            </block>
+        </view>
+    </view>
+</template>
+<!--借款结构模板-->
+<template name="shopListTemp">
+    <navigator class="hot-list" wx:for="{{shopList}}" wx:key="unique">
+        <image class="hot-list-shop" src="../../images/index-hot-list.png"></image>
+        <view class="hot-list-item">
+            <image class="hot-l-t-start" src="../../images/index-star.png"></image>
+            <text class="hot-l-t-1">2345贷款王-现金贷</text>
+            <text class="hot-l-t-2">全民免息，100%中奖，还有机会借钱不用还</text>
+            <text class="hot-l-t-3"><text class="redcolor">97896人</text>已放款</text>
+        </view>
+        <view class="hot-lr">></view>
+    </navigator>
+</template>
+<!--导航模板-->
+<template name="navTemp">
+    <view class="nav-container">
+        <navigator class="nav-list" wx:for="{{nav}}" wx:for-item="navlist" wx:key="unqiue">
+            <view class="nav-l">
+                <image class="nav-l-image" src="{{navlist.src}}"></image>
+                <text class="nav-l-name">{{navlist.name}}</text>
+            </view>
+        </navigator>
+    </view>
+</template>

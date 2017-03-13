@@ -1,0 +1,142 @@
+//公告栏信息
+.billboard {
+  margin-top: 8rpx;
+  background-color: #fff;
+  height: 90rpx;
+  flex-direction: row;
+  overflow: hidden;
+  .icon {
+    float: left;
+    image {
+      width: 100rpx;
+      height: 90rpx;
+      border-radius: 50%;
+    }
+  }
+  .billboard-info-container {
+    height: 90rpx;
+    .billboard-info {
+      float: left;
+      display: flex;
+      image {
+        height: 90rpx;
+        width: 90rpx;
+      }
+      .b-i-r {
+        padding-left: 18rpx;
+        > text {
+          display: block;
+        }
+        .b-i-r-t {
+          font-size: 28rpx;
+          line-height: 50rpx;
+        }
+        .b-i-r-b {
+          font-size: 24rpx;
+          line-height: 34rpx;
+          .b-i-r-b-name, .b-i-r-b-money {
+            color: #f00;
+          }
+        }
+      }
+    }
+  }
+}
+//申请人数
+.people {
+  height: 306rpx;
+  position: relative;
+  margin-top: 10rpx;
+  .p-apply {
+    position: absolute;
+    top: 56rpx;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .p-apply-today, .p-apply-success {
+    display: block;
+    font-size: 26rpx;
+  }
+  .p-apply-success {
+    line-height: 107rpx;
+  }
+  image {
+    height: 306rpx;
+    width: 100%;
+  }
+}
+//首页导航
+.nav-container{
+  display: flex;
+  background-color: #fff;
+  height: 167rpx;
+  margin-top: 9rpx;
+  .nav-list {
+    flex: 1;
+    text-align: center;
+    margin: auto;
+    .nav-l-image {
+      width: 79rpx;
+      height: 79rpx;
+    }
+    .nav-l-name {
+      display: block;
+      color: #333;
+      font-size: 23rpx;
+    }
+  }
+
+}
+//hot
+.hot {
+  margin-top: 8rpx;
+  background-color: #fff;
+  .hot-top {
+    height: 63rpx;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 10rpx 20rpx;
+    border-bottom: 1rpx solid #eee;
+    .hot-icon {
+      width: 24rpx;
+      height: 28rpx;
+    }
+    .hot-title {
+      margin-left: 20rpx;
+      font-size: 23rpx;
+    }
+  }
+  .hot-list {
+    border-bottom: 1rpx solid #eee;
+    display: flex;
+    height: 173rpx;
+    .hot-list-shop {
+      margin-top: 15rpx;
+      width: 100rpx;
+      height: 116rpx;
+    }
+    .hot-list-item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      font-size: 27rpx;
+      padding: 20rpx;
+      > text {
+        flex: 1;
+      }
+      .hot-l-t-3 {
+        font-size: 23rpx;
+      }
+      .hot-l-t-start {
+        position: absolute;
+        right: 20rpx;
+        height: 23rpx;
+        width: 135rpx;
+      }
+    }
+    .hot-lr {
+      margin: auto;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<!-- 可用组件：https://mp.weixin.qq.com/debug/wxadoc/dev/component/ -->
+<!--引入模板文件-->
+<import src='../template/common' />
+<!--最外层容器-->
+<view class="container">
+  <!--carousel模板-->
+  <template is="carouselTemp" data="{{carousel,carouselCurrent}}" />
+  <!--nav-->
+  <view class="nav">
+    <text bindtap="navChange" data-id="one" class="one {{current == 'one' ?  'active' : ''}}">精选</text>
+    <text bindtap="navChange" data-id="two" class="two {{current == 'two' ?  'active' : ''}}">版区</text>
+  </view>
+  <!--切换显示更多信息-->
+  <view wx:if="{{current == 'two'}}" class="more-show">
+    <template is="navTemp" data="{{nav}}" />
+  </view>
+  <!--精选帖子-->
+  <view class="select-post">
+    <!--title-->
+    <view class="post-top">
+      <text class="post-t-content">精选帖子</text>
+    </view>
+    <!--post list-->
+    <navigator wx:if="{{current == 'one'}}" wx:for="123" wx:key="unique" class="post-list">
+      <view class="p-l-top">
+        <image class="p-l-t-left" src="../../images/bbs-1.png"></image>
+        <text class="p-l-t-center">马云首创“无押金”共享单车 这是打发上的发生的看风景哈市的李开复哈萨克地方和撒旦</text>
+        <text class="p-l-t-right">人马科技</text>
+      </view>
+      <view class="p-l-center">
+        如今，共享单车领域可谓是群雄争夺的焦点，在马化腾投资了摩拜单车后，马云也看中了这一领域未来的发展前景...阿卡数据的发生的哈佛阿萨德胡覅撒的发货撒地方
+      </view>
+      <view class="p-l-bottom">
+        <block wx:for="123" wx:key="unique">
+          <view class="p-l-b-{{index}}">
+            <image class="p-l-b-icon" src="../../images/bbs-time.png"></image>
+            <text class="p-l-b-text">2017-03-02</text>
+          </view>
+        </block>
+      </view>
+    </navigator>
+  </view>
+</view>

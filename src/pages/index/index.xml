@@ -1,0 +1,65 @@
+<!-- 可用组件：https://mp.weixin.qq.com/debug/wxadoc/dev/component/ -->
+<!--模板引用-->
+<import src='../template/common' />
+<!--最外层容器-->
+<view class="container">
+  <!--carousel模板-->
+  <template is="carouselTemp" data="{{carousel,carouselCurrent}}" />
+  <!--billbard告示区-->
+  <view class="billboard">
+    <view class="icon"><image src="../../images/play.png"></image></view>
+    <!--右侧信息循环展示-->
+    <!-- todo 信息滚动展示动画 -->
+    <swiper vertical="true" autoplay="true" circular="true" interval="2000" duration="500" class="billboard-info-container clearfix">
+      <block wx:for='123' wx:key="unique">
+        <swiper-item class="billboard-swiper-item">
+          <navigator url="{{url}}" class="billboard-info">
+            <image src="../../images/wechatHL.png"></image>
+            <view class="b-i-r">
+              <text class="b-i-r-t">水象分期{{index}}</text>
+              <text class="b-i-r-b">潮州市的<text class="b-i-r-b-name">张先生</text>今日借款<text class="b-i-r-b-money">6000</text>元已到账</text>
+            </view>
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!--申请人数-->
+  <view class="people">
+    <view class="p-apply">
+      <text class="p-apply-today">今日申请人数<text class="redcolor">2850</text>人</text>
+      <text class="p-apply-success">累积借款成功人数<text class="redcolor">122805</text>人</text>
+    </view>
+    <image src="../../images/index-1.png"></image>
+  </view>
+  <!--nav-->
+  <!--todo 添加导航url-->
+  <template is="navTemp" data="{{nav}}" />
+  <!--<view class="nav-container">-->
+    <!--<navigator class="nav-list" wx:for="{{nav}}" wx:for-item="navlist" wx:key="unqiue">-->
+      <!--<view class="nav-l">-->
+        <!--<image class="nav-l-image" src="{{navlist.src}}"></image>-->
+        <!--<text class="nav-l-name">{{navlist.name}}</text>-->
+      <!--</view>-->
+    <!--</navigator>-->
+  <!--</view>-->
+  <!--热门贷款平台-->
+  <view class="hot">
+    <view class="hot-top">
+      <image class="hot-icon" src="../../images/index-hot.png"></image>
+      <text class="hot-title">热门贷款平台</text>
+    </view>
+    <!--todo 添加导航url-->
+    <!--<navigator class="hot-list" wx:for="123" wx:key="unique">-->
+      <!--<image class="hot-list-shop" src="../../images/index-hot-list.png"></image>-->
+      <!--<view class="hot-list-item">-->
+        <!--<image class="hot-l-t-start" src="../../images/index-star.png"></image>-->
+        <!--<text class="hot-l-t-1">2345贷款王-现金贷</text>-->
+        <!--<text class="hot-l-t-2">全民免息，100%中奖，还有机会借钱不用还</text>-->
+        <!--<text class="hot-l-t-3"><text class="redcolor">97896人</text>已放款</text>-->
+      <!--</view>-->
+      <!--<view class="hot-lr">></view>-->
+    <!--</navigator>-->
+    <template is="shopListTemp" data="{{shopList}}" />
+  </view>
+</view>

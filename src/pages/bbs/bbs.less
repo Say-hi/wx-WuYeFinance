@@ -1,0 +1,113 @@
+.nav {
+  height: 89rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  text-align: center;
+  padding: 14rpx;
+  text {
+    display: inline-block;
+    width: 186rpx;
+    height: 58rpx;
+    line-height: 58rpx;
+    color: #f00;
+    border: 2rpx solid #f00;
+  }
+  text.active {
+    color: #fff;
+    background-color: #f00;
+  }
+  .one {
+    border-top-left-radius: 10rpx;
+    border-bottom-left-radius: 10rpx;
+  }
+  .two {
+    border-top-right-radius: 10rpx;
+    border-bottom-right-radius: 10rpx;
+  }
+}
+//展示更多
+.more-show {
+  height: 166rpx;
+  background-color: #fff;
+  .nav-container {
+    margin-top: 0;
+  }
+}
+//精选帖子
+.select-post {
+  .post-top {
+    height: 55rpx;
+    .post-t-content {
+      line-height: 55rpx;
+      font-size: 28rpx;
+      position: relative;
+      padding-left: 48rpx;
+    }
+    .post-t-content::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 24rpx;
+      width: 6rpx;
+      height: 32rpx;
+      background-color: #f00;
+    }
+  }
+  .post-list {
+    background-color: #fff;
+    padding: 20rpx;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rpx;
+    .p-l-top {
+      position: relative;
+      width: 100%;
+      text {
+      }
+      .p-l-t-left {
+        width: 50rpx;
+        height: 50rpx;
+      }
+      .p-l-t-center {
+        display: inline-block;
+        width: 441rpx;
+        padding-left: 20rpx;
+        font-size: 28rpx;
+        overflow: hidden;
+        text-overflow: ellipsis;/*文字溢出的部分隐藏并用省略号代替*/
+        white-space: nowrap;/*文本不自动换行*/
+      }
+      .p-l-t-right {
+        position: absolute;
+        right: 0;
+        top: 22rpx;
+        font-size: 23rpx;
+      }
+    }
+    .p-l-center {
+      margin-top: 10rpx;
+      font-size: 24rpx;
+      width: 710rpx;
+      height: 58rpx;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .p-l-bottom {
+      display: flex;
+      view:nth-child(1) {
+        flex: 6;
+      }
+      view:nth-child(2){
+        flex: 2;
+      }
+      .p-l-b-icon {
+        width: 21rpx;
+        height: 21rpx;
+      }
+      .p-l-b-text {
+        padding-left: 16rpx;
+        font-size: 18rpx;
+      }
+    }
+  }
+}

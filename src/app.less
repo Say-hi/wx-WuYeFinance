@@ -1,0 +1,73 @@
+// Global style write by less
+// Build to dist/app.wxss
+
+//common style -s
+page {
+  background-color: #eee;
+}
+//清除浮动
+.clearfix {
+  overflow: auto;
+  _height: 1%;
+}
+//红色字
+.redcolor {
+  color: #f00;
+}
+//common style -e
+
+//carousel -s
+.carousel-container {
+  position: relative;
+  .carousel-image {
+    height: 332rpx;
+    image {
+      width: 100%;
+      height: 332rpx;
+    }
+  }
+  .carousel-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20rpx;
+    display: flex;
+    justify-content: center;
+    .dot {
+      margin: 0 8rpx;
+      width: 14rpx;
+      height: 14rpx;
+      background: #fff;
+      border-radius: 8rpx;
+      transition: all .6s;
+    }
+    .dot.active {
+      width: 24rpx;
+      background: #f00;
+    }
+  }
+}
+//carousel -e
+//nav -s
+.nav-container{
+  display: flex;
+  background-color: #fff;
+  height: 167rpx;
+  margin-top: 9rpx;
+  .nav-list {
+    flex: 1;
+    text-align: center;
+    margin: auto;
+    .nav-l-image {
+      width: 79rpx;
+      height: 79rpx;
+    }
+    .nav-l-name {
+      display: block;
+      color: #333;
+      font-size: 23rpx;
+    }
+  }
+
+}
+//nav -e
