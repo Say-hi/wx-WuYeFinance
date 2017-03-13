@@ -14,19 +14,33 @@ Page({
     current: 'one',
     nav: [{
       'src': '../../images/index-nav-1.png',
-      'name': '贷款大全'
+      'name': '银行街',
+      'url': '../lenders/lenders?title=银行街',
+      'type': 'navigate'
     },
     {
       'src': '../../images/index-nav-1.png',
-      'name': '帮你推荐'
+      'name': '网络贷款',
+      'url': '../lenders/lenders?title=网络贷款',
+      'type': 'navigate'
     },
     {
       'src': '../../images/index-nav-1.png',
-      'name': '帮你推荐'
+      'name': '信用贷款',
+      'url': '../lenders/lenders?title=信用贷款',
+      'type': 'navigate'
     },
     {
       'src': '../../images/index-nav-1.png',
-      'name': '帮你推荐'
+      'name': 'POS机',
+      'url': '../lenders/lenders?title=POS机',
+      'type': 'navigate'
+    },
+    {
+      'src': '../../images/index-nav-1.png',
+      'name': '提现攻略',
+      'url': '../lenders/lenders?title=提现攻略',
+      'type': 'navigate'
     }],
     shopList: '12345'
   },

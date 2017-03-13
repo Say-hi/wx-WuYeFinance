@@ -1,7 +1,7 @@
 <!-- 可用组件：https://mp.weixin.qq.com/debug/wxadoc/dev/component/ -->
 <view class="container">
   <!--个人信息跳转显示-->
-  <view class="userInfo">
+  <view wx:if='{{ title == "个人信息" }}' class="userInfo">
     <!--表单提交信息-->
     <form class="userInfo-form" bindsubmit="formSubmit" bindreset="formReset">
       <!--todo 获取用户信息配置value-->
@@ -10,49 +10,53 @@
       </view>
       <view class="u-f-name">
         <text>本人姓名</text>
-        <input placeholder="姓名" name="name" />
+        <input placeholder="请输入您的姓名" name="name" value='{{ user.name || "" }}' />
       </view>
       <view class="u-f-gender">
         <text>性别</text>
-        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <picker name='gender' bindchange="bindGenderChange" value="{{genderIndex}}" range="{{genderArray}}">
           <view class="picker">
-            {{array[index]}}
+            {{genderArray[genderIndex]}}
           </view>
         </picker>
       </view>
       <view class="u-f-age">
         <text>年龄</text>
-        <input type="number" placeholder="请输入您的实际年龄" name="age" value=""/>
+        <input type="number" placeholder="请输入您的实际年龄" name="age" value="{{ user.age || '' }}"/>
       </view>
       <view class="u-f-province">
         <text>所在省份</text>
-        <!--todo picker选择器-->
+          <input name='province' placeholder="选择" value="{{province}}-{{city}}-{{county}}" focus="{{focus}}" bindfocus="open" />
       </view>
       <view class="u-f-cellNumber">
         <text>手机号码</text>
-        <!--todo 手机号码本地的正则验证-->
-        <input placeholder="请输入您的手机号码" name="cellNumber" />
+        <input type='number' placeholder="请输入您的手机号码" name="cellNumber" value="{{ user.cellNumber || '' }}" />
       </view>
       <view class="u-f-qqNumber">
         <text>QQ号码</text>
-        <input placeholder="请输入您的QQ号码" name="qqNumber" />
+        <input type='number' placeholder="请输入您的QQ号码" name="qqNumber" value="{{ user.qqNumber || '' }}" />
       </view>
       <view class="userInfo-text">
         选填信息
       </view>
       <view class="u-f-card">
         <text>有无信用卡</text>
-        <!--todo picker选择器-->
+          <picker name='card' bindchange="bindCardChange" value="{{ user.card || cardIndex}}" range="{{cardArray}}" >
+              <view class="picker">
+                  {{cardArray[cardIndex]}}
+              </view>
+          </picker>
+      <picker></picker>
       </view>
       <view class="u-f-sesame">
         <text>芝麻分</text>
-        <input placeholder="芝麻分分数" name="sesame" value=""/>
+        <input type='number' placeholder="芝麻分分数" name="sesame" value="{{user.sesame || '' }}"/>
       </view>
       <!--跳转认证-->
       <view class="userInfo-text">认证中心</view>
       <view class="userInfo-certification">
-        <navigator open-type="redirect" url="../lenders/lenders" wx:for="123" wx:key="unique">
-          <text>实名认证{{ index }}</text>
+        <navigator open-type="redirect" url="../lenders/lenders?title={{ item }}&userId={{ userInfo.userId }}" wx:for="{{ certificationList }}" wx:key="unique">
+          <text>{{ item }}</text>
         </navigator>
       </view>
       <!--表单提交按钮-->
@@ -61,5 +65,23 @@
         <button formType="reset" type="warn">重置</button>
       </view>
     </form>
+  </view>
+<!--地区三级联动显示区域-->
+  <view wx:if="{{condition}}" class="citypicker">
+    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 600rpx;" value="{{value}}" bindchange="bindChange" class="citybody">
+      <view class="cityheader">
+        <view bindtap="open" class="city-cancel">取消</view>
+        <view bindtap="open" class="city-true">确定</view>
+      </view>
+      <picker-view-column>
+        <view wx:for="{{provinces}}" wx:key="item" style="line-height: 100rpx;padding-left:10px;">{{item}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{citys}}" wx:key="item" style="line-height: 100rpx;padding-left:10px;">{{item}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{countys}}" wx:key="item" style="line-height: 100rpx;padding-left:10px;">{{item}}</view>
+      </picker-view-column>
+    </picker-view>
   </view>
 </view>

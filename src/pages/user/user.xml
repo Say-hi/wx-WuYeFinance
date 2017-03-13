@@ -20,16 +20,16 @@
   </view>
   <!--底部信息-->
   <view class="user-t-bottom">
-    <navigator class="user-t-b-nav" wx:for="123" wx:key="unique">
+    <navigator class="user-t-b-nav" wx:for="{{ userExtension }}" wx:key="unique">
       <image class="user-t-b-image" src="../../images/user-friend.png"></image>
-      <view class="user-t-b-text">朋友圈推广</view>
+      <view class="user-t-b-text">{{ item }}</view>
     </navigator>
   </view>
   <!--列表信息-->
   <view class="user-bottom">
-    <navigator url="../userInfo/userInfo?title={{ index }}" class="user-b-nav" wx:for="12345" wx:key="unique">
+    <navigator url="../userInfo/userInfo?title={{ item }}&userId={{ userInfo.userId }}" class="user-b-nav" wx:for-item='item' wx:for="{{userList}}" wx:key="unique">
       <image class="user-b-n-image" src="../../images/user-red.png"></image>
-      <text class="user-b-n-text">个人信息</text>
+      <text class="user-b-n-text">{{ item }}</text>
     </navigator>
   </view>
 </view>

@@ -15,24 +15,36 @@ Page({
     // nav -s
     nav: [{
       'src': '../../images/index-nav-1.png',
-      'name': '贷款大全'
+      'name': '五叶金融A',
+      'url': '../lenders/lenders?title=贷款大全',
+      'type': 'navigate'
     },
     {
       'src': '../../images/index-nav-1.png',
-      'name': '帮你推荐'
+      'name': '五叶金融B',
+      'url': '../lenders/lenders?title=帮你推荐',
+      'type': 'navigate'
     },
     {
       'src': '../../images/index-nav-1.png',
-      'name': '帮你推荐'
+      'name': '五叶金融C',
+      'url': '../bbs/bbs',
+      'type': 'switchTab'
     },
     {
       'src': '../../images/index-nav-1.png',
-      'name': '帮你推荐'
+      'name': '五叶金融D',
+      'url': '../lenders/lenders?title=邀请有奖',
+      'type': 'navigate'
     },
     {
       'src': '../../images/index-nav-1.png',
-      'name': '帮你推荐'
-    }],
+      'name': '五叶金融E',
+      'url': '../lenders/lenders?title=邀请有奖',
+      'type': 'navigate'
+    }
+    ],
+    rankList: ['综合排序', '排序筛选', '贷款类型', '金额选择'],
     // shop模板数据
     shopList: [1, 2],
     secondShopList: [1, 2, 3]

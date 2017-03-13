@@ -7,6 +7,8 @@ Page({
    */
   data: {
     title: '首页',
+    apply: 2850,
+    applySuccess: 122805,
     // carousel -s
     carousel: {},
     carouselCurrent: 0,
@@ -14,22 +16,26 @@ Page({
     nav: [{
       'src': '../../images/index-nav-1.png',
       'name': '贷款大全',
-      'url': '../lenders/lenders?title=贷款大全'
+      'url': '../lenders/lenders?title=贷款大全',
+      'type': 'navigate'
     },
     {
       'src': '../../images/index-nav-1.png',
       'name': '帮你推荐',
-      'url': '../lenders/lenders?title=帮你推荐'
+      'url': '../lenders/lenders?title=帮你推荐',
+      'type': 'navigate'
     },
     {
       'src': '../../images/index-nav-1.png',
-      'name': '帮你推荐',
-      'url': '../lenders/lenders?title=银行街'
+      'name': '贷款论坛',
+      'url': '../bbs/bbs',
+      'type': 'switchTab'
     },
     {
       'src': '../../images/index-nav-1.png',
-      'name': '帮你推荐',
-      'url': '../lenders/lenders?title=帮你推荐'
+      'name': '邀请有奖',
+      'url': '../lenders/lenders?title=邀请有奖',
+      'type': 'navigate'
     }],
     // shop模板数据
     shopList: [

@@ -17,7 +17,7 @@
 </template>
 <!--借款结构模板-->
 <template name="shopListTemp">
-    <navigator url="{{ item.url }}" class="hot-list" wx:for="{{ shopList }}" wx:key="unique">
+    <navigator url="../lenders/lenders?type=bank&id=1" open-type = 'navigate' class="hot-list" wx:for="{{ shopList }}" wx:key="unique">
         <image class="hot-list-shop" src="../../images/index-hot-list.png"></image>
         <view class="hot-list-item">
             <image class="hot-l-t-start" src="../../images/index-star.png"></image>
@@ -31,7 +31,7 @@
 <!--导航模板-->
 <template name="navTemp">
     <view class="nav-container">
-        <navigator url="{{ navlist.url }}" class="nav-list" wx:for="{{ nav }}" wx:for-item="navlist" wx:key="unqiue">
+        <navigator url="{{ navlist.url }}" open-type='{{ navlist.type  }}'  class="nav-list" wx:for="{{ nav }}" wx:for-item="navlist" wx:key="unqiue">
             <view class="nav-l">
                 <image class="nav-l-image" src="{{navlist.src}}"></image>
                 <text class="nav-l-name">{{navlist.name}}</text>

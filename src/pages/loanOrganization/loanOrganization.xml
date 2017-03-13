@@ -25,8 +25,8 @@
   <view class="rank-container">
     <!--rank-tab-->
     <view class="rank-tab">
-      <block wx:for="1234" wx:key="unique">
-        <view bindtap="rankChange" data-id="{{index}}" class="rank-tab-list {{index == rankCurrent? 'active': '' }}">综合排序{{index}}<text class="rank-icon"></text></view>
+      <block wx:for="{{ rankList }}" wx:key="unique">
+        <view bindtap="rankChange" data-id="{{index}}" class="rank-tab-list {{index == rankCurrent? 'active': '' }}">{{ item }}<text class="rank-icon"></text></view>
       </block>
     </view>
     <!--shopList模板-->

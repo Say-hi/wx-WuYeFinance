@@ -27,8 +27,8 @@
   <!--申请人数-->
   <view class="people">
     <view class="p-apply">
-      <text class="p-apply-today">今日申请人数<text class="redcolor">2850</text>人</text>
-      <text class="p-apply-success">累积借款成功人数<text class="redcolor">122805</text>人</text>
+      <text class="p-apply-today">今日申请人数<text class="redcolor">{{ apply }}</text>人</text>
+      <text class="p-apply-success">累积借款成功人数<text class="redcolor">{{ applySuccess }}</text>人</text>
     </view>
     <image src="../../images/index-1.png"></image>
   </view>
