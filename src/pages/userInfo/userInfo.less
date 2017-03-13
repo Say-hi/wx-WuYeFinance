@@ -1,0 +1,61 @@
+page {
+  background-color: #fff;
+}
+.userInfo {
+  .userInfo-form {
+    font-size: 26rpx;
+    view {
+      margin: 0 20rpx;
+      height: 56rpx;
+      line-height: 56rpx;
+      border-bottom: 2rpx solid #eee;
+      input {
+        height: 100%;
+        width: 550rpx;
+        //background-color: red;
+        //border-radius: 5rpx;
+        float: right;
+        text-align: right;
+      }
+    }
+    .userInfo-certification {
+      navigator  {
+        border-bottom: 2rpx solid #eee;
+      }
+      text {
+        position: relative;
+      }
+      text::after {
+        float: right;
+        content: '';
+        width: 10rpx;
+        height: 10rpx;
+        border-width: 2rpx 2rpx 0 0;
+        border-color: #333;
+        border-style: solid;
+        transform: translateY(25rpx) rotateZ(45deg);
+      }
+    }
+    .btn-area {
+      margin-top: 150rpx;
+      display: flex;
+      border: none;
+      button {
+        width: 200rpx;
+        height: 100rpx;
+      }
+    }
+  }
+  view.userInfo-text {
+    background-color: #f2f2f2;
+    height: 63rpx;
+    font-size: 28rpx;
+    color: #ee2911;
+    line-height: 63rpx;
+    margin: 0;
+    padding-left: 20rpx;
+  }
+}
+picker {
+  float: right;
+}

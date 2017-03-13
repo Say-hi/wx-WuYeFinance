@@ -1,0 +1,49 @@
+page {
+  background-color: #eee;
+}
+.container {
+  background-color: #fff;
+  border-top: 8rpx solid #eee;
+  .bank-container {
+    padding-left: 18rpx;
+    .bank {
+      box-sizing: border-box;
+      padding-top: 10rpx;
+      border-top: 2rpx solid #eee;
+      display: flex;
+      height: 139rpx;
+      .bank-icon {
+        padding-top: 34rpx;
+        width: 56rpx;
+        height: 56rpx;
+      }
+      .bank-text {
+        padding-top: 20rpx;
+        padding-left: 20rpx;
+        text {
+          font-size: 24rpx;
+          padding-left: 10rpx;
+        }
+        text:nth-child(1) {
+          display: block;
+          font-size: 28rpx;
+        }
+
+      }
+      //按钮样式
+      .bank-follow {
+        width: 100rpx;
+        height: 50rpx;
+        font-size: 22rpx;
+        line-height: 50rpx;
+        margin-top: 40rpx;
+        margin-left: 200rpx;
+        padding: 0;
+      }
+    }
+    .bank:nth-child(1) {
+      border-top: 0rpx;
+    }
+  }
+
+}

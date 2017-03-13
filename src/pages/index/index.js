@@ -13,22 +13,31 @@ Page({
     // nav -s
     nav: [{
       'src': '../../images/index-nav-1.png',
-      'name': '贷款大全'
+      'name': '贷款大全',
+      'url': '../lenders/lenders?title=贷款大全'
     },
     {
       'src': '../../images/index-nav-1.png',
-      'name': '帮你推荐'
+      'name': '帮你推荐',
+      'url': '../lenders/lenders?title=帮你推荐'
     },
     {
       'src': '../../images/index-nav-1.png',
-      'name': '帮你推荐'
+      'name': '帮你推荐',
+      'url': '../lenders/lenders?title=银行街'
     },
     {
       'src': '../../images/index-nav-1.png',
-      'name': '帮你推荐'
+      'name': '帮你推荐',
+      'url': '../lenders/lenders?title=帮你推荐'
     }],
     // shop模板数据
-    shopList: [1, 2, 3]
+    shopList: [
+      {'url': '../lenders/lenders?title=贷款大全'},
+      {'url': '../lenders/lenders?title=帮你推荐'},
+      {'url': '../lenders/lenders?title=帮你推荐'},
+      {'url': '../lenders/lenders?title=帮你推荐'}
+    ]
   },
   // carousel小图标跟随
   carouselChange (e) {

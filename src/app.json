@@ -3,10 +3,13 @@
   // First is default to view
   // https://mp.weixin.qq.com/debug/wxadoc/dev/framework/config.html#pages
   "pages": [
-    "pages/bbs/bbs",
-    "pages/loanOrganization/loanOrganization",
+    "pages/userInfo/userInfo",
     "pages/index/index",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/bbs/bbs",
+    "pages/lenders/lenders",
+    "pages/loanOrganization/loanOrganization"
+
     // Dont remove this comment
   ],
   // Window configuration
@@ -36,7 +39,7 @@
   // https://mp.weixin.qq.com/debug/wxadoc/dev/framework/config.html#tabBar
   "tabBar": {
     "color": "#000",
-    "selectedColor": "red",
+    "selectedColor": "#f00",
     "borderStyle": "white",
     "backgroundColor": "#fff",
     "list": [

@@ -1,0 +1,65 @@
+<!-- 可用组件：https://mp.weixin.qq.com/debug/wxadoc/dev/component/ -->
+<view class="container">
+  <!--个人信息跳转显示-->
+  <view class="userInfo">
+    <!--表单提交信息-->
+    <form class="userInfo-form" bindsubmit="formSubmit" bindreset="formReset">
+      <!--todo 获取用户信息配置value-->
+      <view class="userInfo-text">
+        必填信息*
+      </view>
+      <view class="u-f-name">
+        <text>本人姓名</text>
+        <input placeholder="姓名" name="name" />
+      </view>
+      <view class="u-f-gender">
+        <text>性别</text>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+            {{array[index]}}
+          </view>
+        </picker>
+      </view>
+      <view class="u-f-age">
+        <text>年龄</text>
+        <input type="number" placeholder="请输入您的实际年龄" name="age" value=""/>
+      </view>
+      <view class="u-f-province">
+        <text>所在省份</text>
+        <!--todo picker选择器-->
+      </view>
+      <view class="u-f-cellNumber">
+        <text>手机号码</text>
+        <!--todo 手机号码本地的正则验证-->
+        <input placeholder="请输入您的手机号码" name="cellNumber" />
+      </view>
+      <view class="u-f-qqNumber">
+        <text>QQ号码</text>
+        <input placeholder="请输入您的QQ号码" name="qqNumber" />
+      </view>
+      <view class="userInfo-text">
+        选填信息
+      </view>
+      <view class="u-f-card">
+        <text>有无信用卡</text>
+        <!--todo picker选择器-->
+      </view>
+      <view class="u-f-sesame">
+        <text>芝麻分</text>
+        <input placeholder="芝麻分分数" name="sesame" value=""/>
+      </view>
+      <!--跳转认证-->
+      <view class="userInfo-text">认证中心</view>
+      <view class="userInfo-certification">
+        <navigator open-type="redirect" url="../lenders/lenders" wx:for="123" wx:key="unique">
+          <text>实名认证{{ index }}</text>
+        </navigator>
+      </view>
+      <!--表单提交按钮-->
+      <view class="btn-area">
+        <button formType="submit" type="primary">提交</button>
+        <button formType="reset" type="warn">重置</button>
+      </view>
+    </form>
+  </view>
+</view>

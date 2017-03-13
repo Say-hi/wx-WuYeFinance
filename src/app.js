@@ -53,13 +53,29 @@ App({
         .catch(error => console.error('failed to get user info, error: ' + error))
     })
   },
-
+  /**
+   * 关注功能
+   * @param e {Event} 事件参数
+   */
+  followfxs (e) {
+    // 获取关注对象ID
+    var id = e.currentTarget.dataset.id
+    console.info('关注对象ID:' + id)
+    console.info('关注了该对象')
+  },
+  /**
+   * 关注后的弹窗
+   */
+  confirmfxs (that) {
+    return that.setData({ followHidden: true })
+  },
   /**
    * 生命周期函数--监听小程序初始化
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
   onLaunch () {
     console.log(' ========== Application is launched ========== ')
+    this.getUserInfo()
   },
   /**
    * 生命周期函数--监听小程序显示

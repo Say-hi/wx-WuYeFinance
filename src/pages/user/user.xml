@@ -1,4 +1,35 @@
 <!-- 可用组件：https://mp.weixin.qq.com/debug/wxadoc/dev/component/ -->
 <view class="container">
-  <text class="title">{{ title }}</text>
+  <!--用用信息上部-->
+  <view class="user-top">
+    <!--顶部信息-->
+    <view class="user-t-top">
+      <navigator url=""><image class="user-t-t-image" src="{{ userImage }}"></image></navigator>
+      <navigator url="" class="user-t-t-deposit">提现</navigator>
+    </view>
+    <!--中间信息-->
+    <view class="user-t-center">
+      <image class="user-t-c-image" src="{{ userInfo.avatarUrl }}"></image>
+      <view class="user-t-c-name">{{ userInfo.nickName }}</view>
+      <view class="user-t-c-money">余额: <text class="user-t-c-m-number">{{ userInfo.money }}</text> 元</view>
+    </view>
+  </view>
+  <!--弧度颜色区域-->
+  <view class="color">
+    <view class="user-top-other"></view>
+  </view>
+  <!--底部信息-->
+  <view class="user-t-bottom">
+    <navigator class="user-t-b-nav" wx:for="123" wx:key="unique">
+      <image class="user-t-b-image" src="../../images/user-friend.png"></image>
+      <view class="user-t-b-text">朋友圈推广</view>
+    </navigator>
+  </view>
+  <!--列表信息-->
+  <view class="user-bottom">
+    <navigator url="../userInfo/userInfo?title={{ index }}" class="user-b-nav" wx:for="12345" wx:key="unique">
+      <image class="user-b-n-image" src="../../images/user-red.png"></image>
+      <text class="user-b-n-text">个人信息</text>
+    </navigator>
+  </view>
 </view>

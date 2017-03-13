@@ -35,7 +35,7 @@ Page({
     }],
     // shop模板数据
     shopList: [1, 2],
-    shopListTwo: [1, 2, 3]
+    secondShopList: [1, 2, 3]
   },
   // carousel小图标跟随
   carouselChange (e) {

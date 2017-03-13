@@ -7,48 +7,37 @@ Page({
    * 页面的初始数据
    */
   data: {
-    title: '贷款论坛',
-    // carousel -s
-    carousel: {},
-    carouselCurrent: 0,
-    current: 'one',
-    nav: [{
-      'src': '../../images/index-nav-1.png',
-      'name': '贷款大全'
-    },
-    {
-      'src': '../../images/index-nav-1.png',
-      'name': '帮你推荐'
-    },
-    {
-      'src': '../../images/index-nav-1.png',
-      'name': '帮你推荐'
-    },
-    {
-      'src': '../../images/index-nav-1.png',
-      'name': '帮你推荐'
-    }],
-    shopList: '12345'
+    title: null,
+    shopList: '123456',
+    showInfo: {},
+    followHidden: true
   },
-  // carousel小图标跟随
-  carouselChange (e) {
-    let that = this
-    app.carouselChange(e, that)
-  },
-  navChange (e) {
+  // 关注
+  followfxs (e) {
+    app.followfxs(e)
+    // 展示弹窗
     this.setData({
-      current: e.currentTarget.dataset.id
+      followHidden: false
     })
+  },
+  // 关注分析师点击确定后逻辑
+  confirmfxs () {
+    var that = this
+    app.confirmfxs(that)
   },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad () {
-    // TODO: onLoad
-    // 获取app中的轮播图数据
+  onLoad (params) {
+    // 获取跳转链接的信息
+    console.log(params)
     this.setData({
-      carousel: app.data.carousel
+      showInfo: params,
+      title: params.title
     })
+    // 设置导航栏标题
+    console.log(this.data.title)
+    wx.setNavigationBarTitle(this.data.showInfo)
   },
 
   /**

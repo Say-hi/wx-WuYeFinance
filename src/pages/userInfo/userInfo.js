@@ -1,5 +1,5 @@
 // 获取全局应用程序实例对象
-const app = getApp()
+// const app = getApp()
 
 // 创建页面实例对象
 Page({
@@ -7,48 +7,28 @@ Page({
    * 页面的初始数据
    */
   data: {
-    title: '贷款论坛',
-    // carousel -s
-    carousel: {},
-    carouselCurrent: 0,
-    current: 'one',
-    nav: [{
-      'src': '../../images/index-nav-1.png',
-      'name': '贷款大全'
-    },
-    {
-      'src': '../../images/index-nav-1.png',
-      'name': '帮你推荐'
-    },
-    {
-      'src': '../../images/index-nav-1.png',
-      'name': '帮你推荐'
-    },
-    {
-      'src': '../../images/index-nav-1.png',
-      'name': '帮你推荐'
-    }],
-    shopList: '12345'
+    title: '个人中心统一跳转显示页面',
+    showPage: null,
+    index: 0,
+    array: ['男', '女']
   },
-  // carousel小图标跟随
-  carouselChange (e) {
-    let that = this
-    app.carouselChange(e, that)
-  },
-  navChange (e) {
+  bindPickerChange (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
-      current: e.currentTarget.dataset.id
+      index: e.detail.value
     })
+  },
+  formSubmit: function (e) {
+    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+  },
+  formReset: function () {
+    console.log('form发生了reset事件')
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad () {
     // TODO: onLoad
-    // 获取app中的轮播图数据
-    this.setData({
-      carousel: app.data.carousel
-    })
   },
 
   /**

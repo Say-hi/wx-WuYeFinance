@@ -18,7 +18,8 @@
   <!--</view>-->
   <!--shopList-->
   <view class="shop-list">
-    <template is="shopListTemp" data="{{shopList}}" />
+    <!--shopList模板-->
+    <template is="shopListTemp" data="{{ shopList }}" />
   </view>
   <!--rank-->
   <view class="rank-container">
@@ -29,6 +30,6 @@
       </block>
     </view>
     <!--shopList模板-->
-    <template is="shopListTemp" data="{{shopList}}" />
+    <template is="shopListTemp" data="{{ shopList }}" />
   </view>
 </view>

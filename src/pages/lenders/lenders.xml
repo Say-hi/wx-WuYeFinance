@@ -1,0 +1,22 @@
+<!-- 可用组件：https://mp.weixin.qq.com/debug/wxadoc/dev/component/ -->
+<import src='../template/common' />
+<view class="container">
+  <!--其他模块的统一模板-->
+  <view class="other" hidden="{{ title == '银行街'}}">
+    <template  is="shopListTemp" data="{{ shopList }}"></template>
+  </view>
+  <!--银行街-->
+  <view class="bank-container" hidden="{{ title != '银行街'}}">
+    <view class="bank" wx:for="1234567" wx:key="unique">
+      <image class="bank-icon" src="../../images/wechatHl.png"></image>
+      <view class="bank-text">
+        <text>工行信用卡专区</text>
+        <text>主题:<text>27.7</text>万</text>
+        <text>贴数:<text>417.7</text>万</text>
+      </view>
+      <button class="bank-follow" bindtap="followfxs" data-id="{{ index }}">关注</button>
+    </view>
+  </view>
+</view>
+        <!--关注结果弹窗-->
+<modal hidden="{{followHidden}}" title="关注成功" confirm-text="确定" no-cancel="true" bindconfirm="confirmfxs">关注成功</modal>
