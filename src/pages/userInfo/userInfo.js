@@ -12,6 +12,68 @@ Page({
     userInfo: {
       'userId': '123'
     },
+    // 返佣明细
+    rebateInfo: [
+      {
+        'number': 1,
+        'approach': '关注',
+        'money': 1
+      },
+      {
+        'number': 1,
+        'approach': '申请',
+        'money': 2
+      },
+      {
+        'number': 1,
+        'approach': '贷款',
+        'money': 10
+      }
+    ],
+    // 提现明细
+    drawingsInfo: [
+      {
+        'code': 'ZX12684156',
+        'status': 0,
+        'statusText': '处理中',
+        'time': '2017-02-28 10:32:56',
+        'money': '+200.00'
+      },
+      {
+        'code': 'ZX12684156',
+        'status': 1,
+        'statusText': '提现成功',
+        'time': '2017-02-28 10:32:56',
+        'money': '+200.00'
+      },
+      {
+        'code': 'ZX12684156',
+        'status': 1,
+        'statusText': '提现成功',
+        'time': '2017-02-28 10:32:56',
+        'money': '+200.00'
+      }
+    ],
+    // 借款记录
+    loanList: [
+      {
+        'money': '2,000.00',
+        'time': '2016年12月04日',
+        'status': '使用中'
+      },
+      {
+        'money': '1,500.00',
+        'time': '2016年10月17日',
+        'status': '已结清'
+      },
+      {
+        'money': '10,000.00',
+        'time': '2016年06月04日',
+        'status': '已结清'
+      }
+    ],
+    appply: 2850,
+    successApply: 12850,
     certificationList: ['实名认证', '手机号认证', '芝麻信用认证'],
     genderIndex: 0,
     genderArray: ['男', '女'],
@@ -134,7 +196,7 @@ Page({
     that.setData({
       'provinces': provinces,
       'citys': citys,
-      'countys': countys,
+      'countys': countys
       // 'province': cityData[0].name,
       // 'city': cityData[0].sub[0].name,
       // 'county': cityData[0].sub[0].sub[0].name

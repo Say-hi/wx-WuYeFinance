@@ -4,7 +4,7 @@
   <view class="user-top">
     <!--顶部信息-->
     <view class="user-t-top">
-      <navigator url=""><image class="user-t-t-image" src="{{ userImage }}"></image></navigator>
+      <navigator url="../userInfo/userInfo?title=个人信息&userId={{ userInfo.userId }}"><image class="user-t-t-image" src="{{ userImage }}"></image></navigator>
       <navigator url="" class="user-t-t-deposit">提现</navigator>
     </view>
     <!--中间信息-->

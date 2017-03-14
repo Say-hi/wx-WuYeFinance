@@ -67,7 +67,7 @@
     </form>
   </view>
 <!--地区三级联动显示区域-->
-  <view wx:if="{{condition}}" class="citypicker">
+  <view wx:if="{{ condition }}" class="citypicker">
     <picker-view indicator-style="height: 50px;" style="width: 100%; height: 600rpx;" value="{{value}}" bindchange="bindChange" class="citybody">
       <view class="cityheader">
         <view bindtap="open" class="city-cancel">取消</view>
@@ -83,5 +83,59 @@
         <view wx:for="{{countys}}" wx:key="item" style="line-height: 100rpx;padding-left:10px;">{{item}}</view>
       </picker-view-column>
     </picker-view>
+  </view>
+  <!--返佣明细跳转显示-->
+  <view wx:if="{{ title == '返佣明细' }}" class="rebate">
+    <view class="r-list" wx:for="{{ rebateInfo }}" wx:key="unique">
+      <text class="r-l-way">邀请好友<text class="r-l-w-number redcolor">{{ item.number }}</text>位<text class="r-l-w-approach">{{ item.approach }}</text></text>
+      <text class="r-l-get">获得<text class="redcolor r-l-money">{{ item.money }}</text>元</text>
+    </view>
+  </view>
+  <!--提现记录跳转显示-->
+  <view wx:if="{{ title == '提现记录' }}" class="drawings">
+    <view class="d-list" wx:for="{{ drawingsInfo }}" wx:key="unique">
+       <view class="d-l-top">
+         <text class="d-l-t-code">编号:{{ item.code }}</text>
+         <text class="d-l-t-status {{ item.status == 0 ? 'redcolor' : '' }}">{{ item.statusText }}</text>
+       </view>
+      <view class="d-l-bottom">
+        <text class="d-l-b-time">{{ item.time }}</text>
+        <text class="d-l-b-money redcolor">{{ item.money }}</text>
+      </view>
+    </view>
+  </view>
+  <!--借款记录跳转显示-->
+  <view wx:if="{{ title == '借款历史' }}" class="loan">
+    <view class="l-list" wx:for="{{ loanList }}" wx:key="unique">
+      <view class="l-l-left">
+        <view class="l-l-l-money">{{ item.money }}</view>
+        <view class="l-l-l-time">{{ item.time }}借</view>
+      </view>
+      <view class="l-l-right">{{ item.status }}</view>
+    </view>
+  </view>
+  <!--关于我们跳转显示-->
+  <view wx:if="{{ title == '关于我们' }}" class="aboutus">
+    <view class="a-top">
+      <image class="a-t-image" mode="top" src="../../images/aboutus.png"></image>
+      <text class="a-t-text">今日申请人数 <text class="a-t-number">{{ appply }}</text> 人</text>
+      <text class="a-t-text">累计借款成功人数 <text class="a-t-number">{{ successApply }}</text> 人</text>
+    </view>
+    <view class="a-bottom">
+      <text class="a-b-title">公司简介</text>
+      <text class="a-b-text">深圳前海五叶互联网金融服务有限公司是一家依托于互联网支付、云计算、社交网络以及搜索引擎、APP等互联网工具，实现资金融通、支付和信息中介等业务的一种新兴金融公司。 </text>
+      <text class="a-b-title">公司宗旨</text>
+      <text class="a-b-text">不拒绝每一次求助，不辜负每一次信任</text>
+      <text class="a-b-title">联系我们</text>
+      <view class="a-b-concat">
+        <image class="a-b-c-image" src="../../images/aboutus-address.png"></image>
+        <text>地址:</text>
+        <text>广州市番禺区市广路32号万得创意园</text>
+        <text>广州市海珠区新港东路1000号保利世贸大厦E座</text>
+        <image class="a-b-c-image" src="../../images/aboutus-address.png"></image>
+        <text>全国统一客服电话:</text>
+        <text>400-777-0382</text>
+      </view>
+    </view>
   </view>
 </view>

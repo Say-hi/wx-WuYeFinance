@@ -1,6 +1,7 @@
 page {
   background-color: #fff;
 }
+//用户信息展示
 .userInfo {
   .userInfo-form {
     font-size: 26rpx;
@@ -60,6 +61,7 @@ page {
 picker {
   float: right;
 }
+//地区三级联动样式
 .citypicker{
   font-size: 30rpx;
   text-align: center;
@@ -86,4 +88,157 @@ picker {
     color: #2FB42E
   }
 }
-
+//返佣明细
+.rebate {
+  .r-list {
+    height: 81rpx;
+    border-top: 2rpx solid #eee;
+    font-size: 27rpx;
+    color: #333;
+    line-height: 81rpx;
+    padding: 0 24rpx;
+    display: flex;
+    justify-content: space-between;
+  }
+  .r-list:nth-last-child(1) {
+    border-bottom: 2rpx solid #eee;
+  }
+}
+//提现记录
+.drawings {
+  border-top: 8rpx solid #f0eff5;
+  font-size: 26rpx;
+  line-height: 50rpx;
+  .d-list{
+    display: flex;
+    padding: 10rpx 37rpx 24rpx;
+    flex-direction: column;
+    color: #0a0a0a;
+    height: 189rpx;
+    box-sizing: border-box;
+    border-bottom: 2rpx solid #efefef;
+    flex-direction: column;
+    justify-content: center;
+    .d-l-top, .d-l-bottom {
+      display: flex;
+      justify-content: space-between;
+    }
+    .d-l-bottom {
+      color: #666;
+    }
+  }
+}
+//借款记录
+.loan {
+  border-top: 14rpx solid #eee;
+  .l-list {
+    height: 125rpx;
+    box-sizing: border-box;
+    padding: 30rpx 23rpx;
+    font-size: 24rpx;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2rpx solid #e5e5e5;
+    .l-l-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .l-l-l-time, .l-l-right{
+      color: #999;
+    }
+    .l-l-right {
+      line-height: 62rpx;
+      position: relative;
+      right: 22rpx;
+      padding-right: 20rpx;
+    }
+    .l-l-right::after {
+      position: absolute;
+      top: 40%;
+      right: 0;
+      content: '';
+      width: 10rpx;
+      height: 10rpx;
+      border-width: 2rpx 2rpx 0 0;
+      border-color: #333;
+      border-style: solid;
+      transform: rotateZ(45deg);
+    }
+  }
+}
+//关于我们
+.aboutus {
+  .a-top {
+    width: 100%;
+    height: 422rpx;
+    overflow: hidden;
+    position: relative;
+    .a-t-image {
+      width: 100%;
+    }
+    .a-t-text {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 100rpx;
+      font-size: 24rpx;
+      .a-t-number {
+        font-size: 30rpx;
+        color: #ff5b35;
+      }
+    }
+    .a-t-text:nth-child(3) {
+      top: 150rpx;
+      .a-t-number {
+        color: #ed2a12;
+      }
+    }
+  }
+  .a-bottom {
+    padding: 0 40rpx;
+    text {
+      display: block;
+    }
+    .a-b-title {
+      font-size: 28rpx;
+      line-height: 80rpx;
+      color: #333;
+      font-weight: bold;
+      position: relative;
+    }
+    .a-b-title::after {
+      content: '';
+      height: 25rpx;
+      width: 6rpx;
+      background-color: #ed2911;
+      position: absolute;
+      top: 28rpx;
+      left: -20rpx;
+    }
+    .a-b-text {
+      line-height: 44rpx;
+      font-size: 24rpx;
+      color: #999;
+    }
+    .a-b-concat {
+      text {
+        display: inline-block;
+        padding-left: 20rpx;
+        color: #999;
+        font-size: 24rpx;
+        line-height: 42rpx;
+      }
+      text:nth-child(4){
+        display: block;
+        padding-left: 128rpx;
+      }
+      .a-b-c-image {
+        display: inline-block;
+        width: 28rpx;
+        height: 24rpx;
+      }
+    }
+  }
+}
