@@ -1,4 +1,14 @@
 <!-- 可用组件：https://mp.weixin.qq.com/debug/wxadoc/dev/component/ -->
 <view class="container">
-  <text class="title">{{ title }}</text>
+  <!--身份证验证-->
+  <view class="idcard">
+    <view class="idcard-list" wx:for="123" wx:key="unique">
+      <view bindtap="idcardUp" data-id='image{{ index }}' class="idcard-positive ip{{ index }}">
+        <image class="i-p-image" src="{{ image[index] }}"></image>
+      </view>
+      <image class="idcard-image im{{ index }}" src="../../images/approve-1.png"></image>
+    </view>
+    <button disabled="{{ canUp }}"  bindtap="nextsubmit" class="next" type="{{ btnType }}" >上传照片</button>
+  </view>
 </view>
+<loading hidden="{{ hidden }}">上传图片中</loading>

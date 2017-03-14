@@ -3,13 +3,14 @@
   // First is default to view
   // https://mp.weixin.qq.com/debug/wxadoc/dev/framework/config.html#pages
   "pages": [
-    "pages/user/user",
     "pages/index/index",
+    "pages/user/user",
+    "pages/approve/approve",
     "pages/userInfo/userInfo",
     "pages/bbs/bbs",
     "pages/lenders/lenders",
-    "pages/loanOrganization/loanOrganization",
-    "pages/approve/approve"
+    "pages/loanOrganization/loanOrganization"
+
     // Dont remove this comment
   ],
   // Window configuration

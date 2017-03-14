@@ -2,11 +2,11 @@
 <import src='../template/common' />
 <view class="container">
   <!--其他模块的统一模板-->
-  <view class="other" hidden="{{ title == '银行街'}}">
+  <view class="other" wx:if="{{ title != '银行街' && title != '借款' }}">
     <template  is="shopListTemp" data="{{ shopList }}"></template>
   </view>
   <!--银行街-->
-  <view class="bank-container" hidden="{{ title != '银行街'}}">
+  <view class="bank-container" wx:if="{{ title == '银行街' }}" >
     <view class="bank" wx:for="1234567" wx:key="unique">
       <image class="bank-icon" src="../../images/wechatHl.png"></image>
       <view class="bank-text">
@@ -16,6 +16,23 @@
       </view>
       <button class="bank-follow" bindtap="followfxs" data-id="{{ index }}">关注</button>
     </view>
+  </view>
+  <!--借款机构-->
+  <view class="lenders" wx:if="{{ title == '借款' }}">
+      <!--借款机构-->
+       <view class="l-lender">
+         <!--机构图片-->
+         <image class="l-l-icon" src="../../images/lender-1.png"></image>
+         <!--机构名字和成功率-->
+         <view class="l-l-center">
+           <text class="l-l-name">魔法现金贷</text>
+           <view class="l-l-rate">成功率<image class="l-l-r-star" src="../../images/lender-star.png"></image></view>
+         </view>
+         <!--借款人数-->
+         <view class="l-l-people">800人已借款</view>
+       </view>
+      <!--借款金额-->
+
   </view>
 </view>
         <!--关注结果弹窗-->

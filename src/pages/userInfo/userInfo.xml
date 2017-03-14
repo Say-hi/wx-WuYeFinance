@@ -55,7 +55,7 @@
       <!--跳转认证-->
       <view class="userInfo-text">认证中心</view>
       <view class="userInfo-certification">
-        <navigator open-type="redirect" url="../lenders/lenders?title={{ item }}&userId={{ userInfo.userId }}" wx:for="{{ certificationList }}" wx:key="unique">
+        <navigator open-type="redirect" url="../approve/approve?title={{ item }}&userId={{ userInfo.userId }}" wx:for="{{ certificationList }}" wx:key="unique">
           <text>{{ item }}</text>
         </navigator>
       </view>

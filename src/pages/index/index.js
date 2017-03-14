@@ -16,7 +16,7 @@ Page({
     nav: [{
       'src': '../../images/index-nav-1.png',
       'name': '贷款大全',
-      'url': '../lenders/lenders?title=贷款大全',
+      'url': '../lenders/lenders?title=借款',
       'type': 'navigate'
     },
     {
