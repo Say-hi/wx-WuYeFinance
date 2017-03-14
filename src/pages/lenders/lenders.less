@@ -47,7 +47,9 @@ page {
   }
   //借款申请样式
   .lenders {
+    //借款机构
     .l-lender {
+      background-color: #eee;
       height: 140rpx;
       padding: 20rpx;
       box-sizing: border-box;
@@ -63,7 +65,7 @@ page {
         font-size: 24rpx;
         line-height: 36rpx;
         color: #333;
-        padding-left: 20rpx;
+        padding-left: 18rpx;
         .l-l-r-star {
           width: 153rpx;
           height: 24rpx;
@@ -76,5 +78,106 @@ page {
         color: #333;
       }
     }
+    //借款金额
+    .l-info {
+      height: 175rpx;
+      box-sizing: border-box;
+      line-height: 42rpx;
+      border-bottom: 2rpx solid #e3e3e5;
+      .l-i-money {
+        padding: 20rpx 25rpx;
+        display: flex;
+        font-size: 26rpx;
+        .l-i-m-icon {
+          width: 39rpx;
+          height: 39rpx;
+        }
+        .l-i-m-text {
+          padding-left: 21rpx;
+          flex: 5;
+        }
+        .l-i-m-money {
+          position: relative;
+          left: -116rpx;
+        }
+        .l-i-m-money::after {
+          position: absolute;
+          top: 35%;
+          right: -92rpx;
+          content: '';
+          width: 10rpx;
+          height: 10rpx;
+          border-width: 2rpx 2rpx 0 0;
+          border-color: #333;
+          border-style: solid;
+          transform: rotateZ(45deg);
+        }
+      }
+    }
+    // 借款时间
+    .l-repayment {
+      height: 142rpx;
+      border-bottom: 2rpx solid #c8c7cc;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-around;
+      font-size: 30rpx;
+      padding: 36rpx 0;
+      text-align: center;
+      line-height: 40rpx;;
+      .l-r-money {
+        display: flex;
+        flex-direction: column;
+      }
+      .l-r-m-text {
+        color: #949494;
+      }
+    }
+    //活动
+    .active {
+      .a-w-icon {
+        width: 38rpx;
+        height: 38rpx;
+        transform: translateY(10rpx);
+      }
+    }
   }
+}
+.a-a-text {
+  display: block;
+  line-height: 36rpx;
+  padding-bottom: 20rpx;
+}
+.a-w-text, .a-a-text {
+  padding-left: 12rpx;
+  font-size: 26rpx;
+  color: #6f6f6f;
+}
+.all {
+  border-top: 22rpx solid #efeff4;
+  padding: 5rpx 20rpx;
+  line-height: 64rpx;
+}
+.all-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  position: relative;
+  padding-left: 23rpx;
+}
+.all-title::before {
+  content: '';
+  width: 12rpx;
+  height: 30rpx;
+  background-color: #f00;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.btn {
+  background-color: #eee;
+  height: 150rpx;
+  padding: 40rpx 0;
+}
+.lender-btn {
+  width: 80%;
 }

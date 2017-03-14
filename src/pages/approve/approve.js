@@ -47,21 +47,21 @@ Page({
       'filePath': filePath[i],
       success (res) {
         // todo 上传结果反馈用户
-        setTimeout(()=>{
+        setTimeout(() => {
           that.setData({
             hidden: true,
             canUp: true,
             btnType: 'warn'
           })
-          //弹窗提示
+          // 弹窗提示
           wx.showToast({
             title: '成功',
             icon: 'success',
             mask: true,
             duration: 2000
           })
-        },5000)
-      },
+        }, 5000)
+      }
     }
     wx.uploadFile(obj)
   },

@@ -32,7 +32,48 @@
          <view class="l-l-people">800人已借款</view>
        </view>
       <!--借款金额-->
-
+        <view class="l-info">
+            <!--todo 信息修改-->
+            <navigator class="l-i-money" wx:for='12' wx:key='unique'>
+                <image class="l-i-m-icon" src='../../images/lender-money.png'></image>
+                <text class='l-i-m-text'>借款金额</text>
+                <text class='l-i-m-money'>500元</text>
+            </navigator>
+        </view>
+      <!--借款时间-->
+      <view class="l-repayment">
+          <view class="l-r-money" wx:for='123' wx:key='unique'>
+              <text class='redcolor'>500.1元</text>
+              <text class='l-r-m-text'>{{ repayment[index] }}</text>
+          </view>
+      </view>
+      <!--活动-->
+      <view class="active all">
+          <text class="all-title">参与的活动</text>
+          <view class="a-wrap">
+              <image class='a-w-icon' src='../../images/lender-money.png'></image>
+              <text class="a-w-text">{{ lenderInfo.active }}</text>
+          </view>
+      </view>
+      <!--申请资格-->
+      <view class="apply all">
+          <text class="all-title">申请资格</text>
+          <text class='a-a-text'>{{ lenderInfo.apply }}</text>
+      </view>
+      <!--所需资料-->
+      <view class="material all">
+          <text class="all-title">所需资料</text>
+          <text class='a-a-text'>{{ lenderInfo.material }}</text>
+      </view>
+      <!--注意事项-->
+      <view class="notice all">
+          <text class="all-title">注意事项</text>
+          <text class='a-a-text'>{{ lenderInfo.notice }}</text>
+      </view>
+      <!--按钮-->
+      <view class='btn'>
+          <button class='lender-btn' type='warn' >立即申请</button>
+      </view>
   </view>
 </view>
         <!--关注结果弹窗-->

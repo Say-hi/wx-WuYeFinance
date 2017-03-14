@@ -10,7 +10,14 @@ Page({
     title: null,
     shopList: '123456',
     showInfo: {},
-    followHidden: true
+    followHidden: true,
+    repayment: ['到时还款', '参考日利率', '最快放款时间'],
+    lenderInfo: {
+      'active': '推荐商家，通过率较高',
+      'apply': '无论阿斯顿发阿斯顿发生大法师打发生大法师打发撒地方撒的发生的发生的发生大事都发的所发生的发的说法说大法师打发斯蒂芬',
+      'material': '发阿斯顿发生大法师打发生大法师打发撒地方撒的发生的发生的发生',
+      'notice': '信息务必真实'
+    }
   },
   // 关注
   followfxs (e) {
